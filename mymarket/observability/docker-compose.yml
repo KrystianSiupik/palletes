@@ -3,16 +3,17 @@ services:
     image: grafana/tempo:latest
     command: ["-config.file=/etc/tempo.yaml"]
     ports:
-      - "3200:3200" # Tempo query
-      - "4319:4317" # OTLP gRPC ingest
+      - "3200:3200" # tylko to wystawiaj – Grafana łączy się tutaj
     volumes:
       - ./tempo.yml:/etc/tempo.yaml:ro
+    # NIE dodawaj 4317 ani 4318 – niech będzie dostępny tylko wewnątrz sieci
 
   otel-collector:
     image: otel/opentelemetry-collector-contrib:latest
     command: ["--config=/etc/otelcol/config.yaml"]
     ports:
-      - "4317:4317" # OTLP gRPC receiver (app -> collector)
+      - "4317:4317" # tu aplikacje wysyłają OTLP gRPC
+      - "4318:4318" # opcjonalnie OTLP HTTP
     volumes:
       - ./otel-collector.yml:/etc/otelcol/config.yaml:ro
     depends_on:
