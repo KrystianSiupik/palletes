@@ -1,17 +1,17 @@
 import { InvalidMoneyAmount } from "./errors/InvalidMoneyAmount";
 import { InvalidCurrencyFormat } from "./errors/InvalidCurrencyFormat";
 import { CurrencyMismatch } from "./errors/CurrencyMismatch";
+import { Currency } from "./CurrencyValueObject";
 
 export class Money {
   private constructor(
     public readonly amount: number,
-    public readonly currency: string,
+    public readonly currency: Currency,
   ) {
     if (!Number.isFinite(amount) || amount < 0) throw new InvalidMoneyAmount();
-    if (!currency || currency.length > 3) throw new InvalidCurrencyFormat();
   }
 
-  static of(amount: number, currency: string) {
+  static of(amount: number, currency: Currency) {
     return new Money(amount, currency);
   }
 
