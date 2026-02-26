@@ -1,0 +1,37 @@
+target: all # ← TO JEST NAJWAŻNIEJSZE – monolithic mode
+
+server:
+  http_listen_port: 3200
+  log_level: info # zmień na debug jeśli chcesz więcej logów
+
+compactor:
+  compaction:
+    block_retention: 24h #jak długo na dysku
+
+distributor:
+  receivers:
+    otlp:
+      protocols:
+        grpc:
+          endpoint: 0.0.0.0:4317
+        http:
+          endpoint: 0.0.0.0:4318
+
+ingester:
+  trace_idle_period: 10s
+  max_block_duration: 30m # jak długo blok w pamięci przed zapisem
+  lifecycler:
+    ring:
+      kvstore:
+        store: inmemory # ← ring w pamięci – zero memberlista, zero empty ring
+      replication_factor: 1
+
+storage:
+  trace:
+    backend: local
+    wal:
+      path: /tmp/tempo/wal
+    local:
+      path: /tmp/tempo/blocks
+
+multitenancy_enabled: false # single tenant – upraszcza bardzo dużo
