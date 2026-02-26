@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/pg": "^8.16.0",
     "@types/react": "^19",
@@ -36,9 +37,11 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "install": "^0.13.0",
+    "jest": "^30.2.0",
     "npm": "^11.11.0",
     "prisma": "^7.4.1",
     "tailwindcss": "^4",
+    "ts-jest": "^29.4.6",
     "tsx": "^4.21.0",
     "typescript": "^5"
   }
