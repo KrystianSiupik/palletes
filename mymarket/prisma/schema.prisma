@@ -20,6 +20,22 @@ enum Role {
   MAGAZINIER
 
 }
+
+enum PalletType {
+    EPAL_1 
+  EPAL_2 
+  EPAL_3 
+  EPAL_6 
+  GMA 
+  CUSTOM 
+}
+
+enum PalletCertificate {
+    EPAL 
+  ISPM15
+  FSC 
+  PEFC 
+}
 model User{
   id String @id @default(uuid())
   name String 
@@ -38,4 +54,25 @@ model Address{
   user User @relation(fields: [userId], references: [id])
 
   City String
+}
+
+model Pallet {
+  id            String @id @default(uuid())
+  name          String
+  type          PalletType
+
+  length        Int
+  width         Int
+  height        Int
+
+  certificates  PalletCertificateOnPallet[]
+}
+
+model PalletCertificateOnPallet {
+  palletId      String
+  certificate   PalletCertificate
+
+  pallet        Pallet @relation(fields: [palletId], references: [id])
+
+  @@id([palletId, certificate])
 }
