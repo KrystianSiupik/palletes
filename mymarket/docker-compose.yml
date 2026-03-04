@@ -2,9 +2,7 @@ version: "3.9"
 
 services:
   app:
-    build:
-      context: . #katalog, który Docker wysyła do silnika builda jako źródło plików.
-      target: prod
+    image: krystiansiupik/palletes:latest
     container_name: mymarket-app
     ports:
       - "3000:3000"
