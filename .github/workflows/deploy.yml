@@ -20,7 +20,7 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/palletes:latest .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/palletes:latest ./mymarket
 
       - name: Push image
         run: |
