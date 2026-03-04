@@ -40,5 +40,5 @@ jobs:
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/palletes:latest
             docker stop mymarket-app || true
-            docker rm mymarket-app || true
-            docker run -d -p 3000:3000 --name mymarket-app ${{ secrets.DOCKERHUB_USERNAME }}/palletes:latest
+            docker compose down
+            docker compose up -d
