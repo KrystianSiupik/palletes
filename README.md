@@ -115,3 +115,7 @@ Projekt stanowi przykład zastosowania systemów informatycznych w obszarze cont
   - logi: `/var/log/letsencrypt/letsencrypt.log`
 
 ---
+
+## Event Storming
+
+https://www.figma.com/board/qbbYDyuALVBvs9ziVaALCE/palletes?node-id=0-1&t=SCnd5ZfIukZCglqD-0
