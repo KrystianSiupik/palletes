@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs wc:*)",
+      "Bash(xargs grep:*)",
+      "Bash(ls -la /c/Users/cp24/Desktop/Praca/market/mymarket/app/[...slug]/)",
+      "Bash(find /c/Users/cp24/Desktop/Praca/market/mymarket/app/[...slug]/ -type f -name \"*.tsx\" -o -name \"*.ts\")",
+      "Bash(xargs cat:*)",
+      "Bash(ls -lah /c/Users/cp24/Desktop/Praca/market/mymarket/app/backend/lambdas/*/)",
+      "Bash(npx tsc:*)",
+      "Bash(terraform validate:*)",
+      "Bash(terraform init:*)",
+      "Bash(terraform -chdir=terraform validate)",
+      "Bash(npx jest:*)",
+      "Bash(terraform fmt:*)"
+    ]
+  }
+}

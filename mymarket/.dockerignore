@@ -10,3 +10,4 @@ README.md
 .env.development
 .env.production
 npm-debug.log
+terraform/.terraform*

@@ -1,7 +1,8 @@
 import { Pallet } from "./PalletAggregate";
+
 export interface PalletRepository {
-  upsert: () => Promise<Pallet>;
-  delete: (id: string) => void;
+  upsert: (pallet: Pallet) => Promise<void>;
+  delete: (id: string) => Promise<void>;
   getAll: () => Promise<Pallet[]>;
-  findById: () => Promise<Pallet>;
+  findById: (id: string) => Promise<Pallet | null>;
 }

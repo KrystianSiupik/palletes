@@ -21,6 +21,18 @@ export class Size {
     );
   }
 
+  getLength(): Length {
+    return this.length;
+  }
+
+  getWidth(): Length {
+    return this.width;
+  }
+
+  getHeight(): Length {
+    return this.height;
+  }
+
   equals(other: Size): boolean {
     return (
       this.length.equals(other.length) &&
