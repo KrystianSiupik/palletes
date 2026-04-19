@@ -42,14 +42,24 @@ export class Pallet {
     name: string;
     size: Size;
     type: PalletType;
-    certifcation: PalletCertification[];
+    certification: PalletCertification[];
   }): Pallet {
     return new Pallet(
       snapshot.id,
       snapshot.name,
       snapshot.size,
       snapshot.type,
-      snapshot.certifcation,
+      snapshot.certification,
     );
+  }
+
+  snapshot() {
+    return {
+      id: this.id,
+      name: this.name,
+      size: this.size,
+      type: this.type,
+      certification: this.certification,
+    };
   }
 }
