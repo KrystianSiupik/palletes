@@ -85,5 +85,9 @@
     "ts-jest": "^29.4.6",
     "tsx": "^4.21.0",
     "typescript": "^5"
+  },
+  "overrides": {
+    "handlebars": "^4.7.9",
+    "protobufjs": "^8.0.1"
   }
 }
