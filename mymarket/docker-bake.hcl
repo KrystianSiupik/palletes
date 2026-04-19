@@ -18,9 +18,9 @@ target "_cache" {
 
 
 target "main" {
-    context = "."
+    context = "./"
     inherits = ["_common", "_cache"]
-    dockerfile = "Dockerfile"
+    dockerfile = "./Dockerfile"
     tags = ["krystiansiupik/palletes:${PROD}"]
 }
 
