@@ -21,6 +21,6 @@ target "main" {
     context = "./mymarket"
     inherits = ["_common", "_cache"]
     dockerfile = "./Dockerfile"
-    tags = ["krystiansiupik/palletes:${PROD}"]
+    tags = ["sheno04/palletes:${PROD}"]
 }
 
