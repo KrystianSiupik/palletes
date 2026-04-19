@@ -12,8 +12,8 @@ target "_common" {
 }
 
 target "_cache" {
-    cache-from = ["type=registry,ref=ghcr.io/krystiansiupik/palletes:buildcache"]
-    cache-to   = ["type=registry,ref=ghcr.io/krystiansiupik/palletes:buildcache,mode=max"]
+    cache-from = ["type=registry,ref=sheno04/palletes:buildcache"]
+    cache-to   = ["type=registry,ref=sheno04/palletes:buildcache,mode=max"]
 }
 
 
