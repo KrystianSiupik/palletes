@@ -42,6 +42,7 @@ resource "aws_lambda_permission" "apigw_pallet" {
 }
 
 # ==================== ORDER ====================
+#
 
 resource "aws_apigatewayv2_integration" "order" {
   api_id                 = aws_apigatewayv2_api.general.id

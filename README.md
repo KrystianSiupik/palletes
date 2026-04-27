@@ -118,4 +118,6 @@ Projekt stanowi przykład zastosowania systemów informatycznych w obszarze cont
 
 ## Event Storming
 
+## 26.04.2026 Aktualizacja event storming
+
 https://www.figma.com/board/qbbYDyuALVBvs9ziVaALCE/palletes?node-id=0-1&t=SCnd5ZfIukZCglqD-0
